@@ -1,0 +1,10 @@
+{% extends 'Class_app/base.html' %}
+{% block body_block %}
+<h1>Person Details:</h1>
+<p>{{person.name}}</p>
+<p>{{person.email}}</p>
+<p>{{person.shirt_size}}</p>
+<a href="{% url 'class_app:add_person' pk=person.pk %}" class="btn btn-info">Update</a>
+<a href="{% url 'class_app:delete_person' pk=person.pk %}" class="btn btn-danger">Delete</a>
+
+{% endblock %}
